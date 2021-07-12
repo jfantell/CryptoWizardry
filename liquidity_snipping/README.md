@@ -34,12 +34,22 @@ Note: This project has only been tested on a machine running Ubuntu Linux 20.04
 ![Permissions Scopes](assets/OAuthAndPermissionsScopes.png)
 5. Find the "OAuth Tokens for Your Workspace" section at the top of the page and click the `Install to workspace` button
     * Proceed through the confirmation prompts
-![Install to Workspace](InstallToWorkspace)
+![Install to Workspace](assets/InstallToWorkspace)
 6. Copy the newly generated "Bot User OAuth Token" to the `.env` file in your local repository
     * SLACK_BOT_TOKEN=<Bot User OAuth Token>
 7. Navigate to the "Basic Information" page and under the "App Credentials" section find "Signing Secret" and copy it to the `.env` file in your local repository
     * SLACK_SIGNING_SECRET=<Signing Secret>
-8. Open a terminal and run `ngrok http 3001` (this URL)
-9. In the browser navigate to the `Event Subscriptions` page
-10. Run `node liquidity_snipping/bot.js`
-11. Open a separate terminal 
+8. Open a terminal, navigate to your repository, and run `node liquidity_snipping/bot.js`
+9. Open a new terminal and run `ngrok http 3001`
+10. Copy the circled IP address to your clipboard
+![Ngrok](assets/Ngrok.png)
+10. In the browser navigate to the `Event Subscriptions` page
+11. Paste the IP address in the "Request URL" field and append "/slack/events" to it
+    * Make sure to hit the "Save Changes" button at the bottom of the page
+![Event Subscriptions](assets/EventSubscriptions.png)
+12. Now go to your slack workspace, type "@<Bot Name> test, and verify the response matches that in the image
+![Slack Bot Test](assets/SlackBotTest.png)
+
+## To-Do
+
+- [] Notify Slack users whether any of the new pairs are [incentivized](https://quickswap.exchange/#/quick)
