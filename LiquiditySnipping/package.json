@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "This repository contains smart contracts and associated JS scripts required to do flash loans on the BSC.",
   "scripts": {
+    "start": "node src/bot.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "John Fantell",

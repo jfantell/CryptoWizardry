@@ -64,7 +64,7 @@ async function parsePairCreatedEvent(event){
     if(WETHaddress){
       try {
         const result = await bot.client.chat.postMessage({
-          channel: 'random',
+          channel: 'cryptowizardry',
           text: `${pairDataMessage}`
         });
         logger.debug(JSON.stringify(result));

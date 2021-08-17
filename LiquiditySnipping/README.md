@@ -34,7 +34,7 @@ Note: This project has only been tested on a machine running Ubuntu Linux 20.04
 ![Permissions Scopes](assets/OAuthAndPermissionsScopes.png)
 5. Find the "OAuth Tokens for Your Workspace" section at the top of the page and click the `Install to workspace` button
     * Proceed through the confirmation prompts
-![Install to Workspace](assets/InstallToWorkspace)
+![Install to Workspace](assets/InstallToWorkspace.png)
 6. Copy the newly generated "Bot User OAuth Token" to the `.env` file in your local repository
     * SLACK_BOT_TOKEN=<Bot User OAuth Token>
 7. Navigate to the "Basic Information" page and under the "App Credentials" section find "Signing Secret" and copy it to the `.env` file in your local repository
@@ -50,6 +50,10 @@ Note: This project has only been tested on a machine running Ubuntu Linux 20.04
 12. Now go to your slack workspace, type "@<Bot Name> test, and verify the response matches that in the image
 ![Slack Bot Test](assets/SlackBotTest.png)
 
-## To-Do
+## Possible Extensions
 
 - [] Notify Slack users whether any of the new pairs are [incentivized](https://quickswap.exchange/#/quick)
+
+## License
+
+MIT

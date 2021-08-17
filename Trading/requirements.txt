@@ -1,0 +1,2 @@
+git+https://github.com/terra-money/terra-sdk-python.git
+slack_bolt
